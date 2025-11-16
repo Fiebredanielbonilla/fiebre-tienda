@@ -1,0 +1,17 @@
+{
+  "builds": [
+    {
+      "src": "api/create-payment.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
